@@ -3,13 +3,6 @@ package calculator;
 import java.util.Scanner;
 
 public class calculator {
-	static double num1 = 0;
-	static double num2 = 0;
-
-	public double additionMethod(double num1, double num2) {
-		double ans = num1 + num2;
-		return ans;
-	}
 
 	public void main(String[] args) {
 		Scanner numberInput = new Scanner(System.in);
@@ -24,8 +17,21 @@ public class calculator {
 		System.out.println("a - addition \n b - subtraction \n c - division \n d - multiplication");
 		Scanner optionInput = new Scanner(System.in);
 		String option = optionInput.nextLine();
+
 		if (option == "a") {
-			additionMethod(num1, num2);
+			double ans = num1 + num2;
+			System.out.println("The result is " + ans);
+		} else if (option == "b") {
+			double ans = num1 - num2;
+			System.out.println("The result is " + ans);
+		} else if (option == "c") {
+			double ans = num1 / num2;
+			System.out.println("The result is " + ans);
+		} else if (option == "d") {
+			double ans = num1 * num2;
+			System.out.println("The result is " + ans);
+		} else {
+			System.out.println("Incorrect option, please try again.");
 		}
 
 		optionInput.close();
